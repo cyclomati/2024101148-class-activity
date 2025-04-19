@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <!-- Importing A-Frame JavaScript library (v1.7.0) for building 3D scenes -->
+    <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <!-- A-Frame scene container -->
+    <a-scene>
+
+      <!-- Box shape (bottom-most object), 1 unit tall, centered at y=0.5 -->
+      <a-box position="0 0.5 -4" height="1" color="#4CC3D9"></a-box>
+
+      <!-- Cone placed on top of the box, total center at y=1.5 (so its base starts at y=1) -->
+      <a-cone position="0 1.5 -4" height="1" radius-bottom="0.5" radius-top="0.1" color="#FFC65D"></a-cone>
+
+      <!-- Tetrahedron placed above cone, scaled to be ~1 unit tall, center at y=2.5 -->
+      <a-tetrahedron position="0 2.5 -4" scale="1 1 1" color="#FF69B4"></a-tetrahedron>
+
+      <!-- Octahedron on top of tetrahedron, also scaled to 1 unit height, center at y=3.5 -->
+      <a-octahedron position="0 3.5 -4" scale="1 1 1" color="#7B68EE"></a-octahedron>
+
+      <!-- Plane acts as the ground, lying flat at y=0 -->
+      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+
+      <!-- Sky element provides background color to the scene -->
+      <a-sky color="#ECECEC"></a-sky>
+
+    </a-scene>
+  </body>
+</html>
